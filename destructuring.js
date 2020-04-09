@@ -102,3 +102,11 @@ function obj_param_dest({x,y}){
 obj_param_dest({y:1,x:2})
 obj_param_dest({y:42})
 obj_param_dest({})
+
+//destructuring defaults and parameter defaults
+function f6({x=10}= {},{y}={y:10}){
+  console.log(x,y);
+}
+f6()
+f6({},{})
+f6({x:2},{y:3})
